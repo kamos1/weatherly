@@ -1,0 +1,45 @@
+body {
+  font-family: Abel;
+}
+
+.inputs {
+  float: right;
+  border: none;
+  background: none;
+  padding-top: 0;
+  height: 40px;
+  font-family: Abel;
+}
+
+#mainInput {
+  width: 500px;
+  border-bottom: 1px solid #0e1435;
+}
+
+.currentInfo {
+  display: flex;
+}
+
+.hourlyForecast {
+  display: flex;
+  margin-left: 25px;
+}
+
+.hourlyTest {
+  display: flex;
+  width: 100%;
+}
+
+.tenDay {
+  display: flex;
+  justify-content: center;
+  margin-left: 25px;
+}
+
+.tenDayTitle {
+  margin-left: 43%;
+}
+
+.marginHourly {
+  margin-left: 10px;
+}
