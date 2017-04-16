@@ -1,33 +1,53 @@
 body {
   font-family: Abel;
+  background-image: url('https://guidetoiceland.is/image/10636/x/0/the-unpredictable-winter-weather-in-iceland-3.png');
+  color: #FFFFFF;
+}
+
+h1 {
+  position: relative;
+  margin-left: 25px;
 }
 
 .inputs {
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #FFFFFF;
   border: none;
   background: none;
-  padding-top: 0;
   height: 40px;
   font-family: Abel;
+  margin-right: 25px;
 }
 
 #mainInput {
   width: 500px;
-  border-bottom: 1px solid #0e1435;
+  border-bottom: 1px solid #FFFFFF;
 }
 
 .currentInfo {
   display: flex;
+  justify-content: center;
+}
+
+.current {
+  display: flex;
+  justify-content: center;
 }
 
 .hourlyForecast {
-  display: flex;
-  margin-left: 25px;
+  width: 100%;
 }
 
 .hourlyTest {
   display: flex;
-  width: 100%;
+  justify-content: center;
+}
+
+.hourlyTitle {
+  display: flex;
+  justify-content: center;
 }
 
 .tenDay {
@@ -37,9 +57,24 @@ body {
 }
 
 .tenDayTitle {
-  margin-left: 43%;
+  display: flex;
+  justify-content: center;
 }
 
 .marginHourly {
   margin-left: 10px;
+}
+
+.dayItemTable {
+  border: 1px solid #FFFFFF;
+  width: 50%;
+  background: rgba(72,92,111,0.8);
+}
+
+.day {
+  width: 100px;
+}
+
+.currentTemp {
+  padding-left: 15px;
 }
