@@ -4,11 +4,6 @@ body {
   color: #FFFFFF;
 }
 
-h1 {
-  position: relative;
-  margin-left: 25px;
-}
-
 .inputs {
   position: absolute;
   top: 18px;
@@ -29,8 +24,7 @@ h1 {
 }
 
 .currentInfo {
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 .current {
@@ -49,8 +43,7 @@ h1 {
 }
 
 .hourlyTitle {
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 .tenDay {
@@ -75,6 +68,10 @@ h1 {
 
 .currentTemp {
   padding-left: 15px;
+}
+
+hr {
+  width: 90%;
 }
 
 @media screen and (max-width: 840px) {
