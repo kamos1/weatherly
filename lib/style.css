@@ -1,18 +1,20 @@
 body {
-  font-family: Abel;
   background-image: url('https://guidetoiceland.is/image/10636/x/0/the-unpredictable-winter-weather-in-iceland-3.png');
   color: #FFFFFF;
+  font-family: Abel;
 }
 
+/* Input Styling */
+
 .inputs {
+  background: rgba(255,255,255,0.8);
+  border: none;
+  margin-right: 5px;
   position: absolute;
   top: 18px;
   right: 0;
-  border: none;
-  background: rgba(255,255,255,0.8);
   height: 40px;
   font-family: Abel;
-  margin-right: 5px;
 }
 
 #mainInput {
@@ -23,21 +25,30 @@ body {
   background: none;
 }
 
+/* DisplayTemp Styling */
+
 .currentInfo {
   text-align: center;
 }
 
-.current {
+.currentTitle {
   display: flex;
   justify-content: center;
 }
+
+.currentTemp {
+  padding-left: 15px;
+}
+
+
+/* Hourly Forecast Styling */
 
 .hourlyForecast {
   width: 100%;
   text-align: center;
 }
 
-.hourlyTest {
+.hourlyWrapper {
   display: flex;
   text-align: center;
 }
@@ -46,14 +57,15 @@ body {
   text-align: center;
 }
 
+/* Ten Day Styling */
+
 .tenDay {
   display: flex;
   justify-content: center;
 }
 
 .tenDayTitle {
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 .dayItemTable {
@@ -64,10 +76,6 @@ body {
 
 .day {
   width: 100px;
-}
-
-.currentTemp {
-  padding-left: 15px;
 }
 
 hr {
@@ -85,7 +93,7 @@ hr {
     background: none;
   }
 
-  .hourlyTest {
+  .hourlyWrapper {
     display: ;
   }
 
@@ -96,7 +104,7 @@ hr {
 }
 
 @media screen and (max-width: 535px) {
-  .hourlyTest {
+  .hourlyWrapper {
     overflow: auto;
     white-space: nowrap;
   }
