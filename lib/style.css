@@ -11,19 +11,21 @@ h1 {
 
 .inputs {
   position: absolute;
-  top: 0;
+  top: 18px;
   right: 0;
-  color: #FFFFFF;
   border: none;
-  background: none;
+  background: rgba(255,255,255,0.8);
   height: 40px;
   font-family: Abel;
-  margin-right: 25px;
+  margin-right: 5px;
 }
 
 #mainInput {
-  width: 500px;
-  border-bottom: 1px solid #FFFFFF;
+  width: 30%;
+}
+
+#submitButton {
+  background: none;
 }
 
 .currentInfo {
@@ -38,11 +40,12 @@ h1 {
 
 .hourlyForecast {
   width: 100%;
+  text-align: center;
 }
 
 .hourlyTest {
   display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 .hourlyTitle {
@@ -53,16 +56,11 @@ h1 {
 .tenDay {
   display: flex;
   justify-content: center;
-  margin-left: 25px;
 }
 
 .tenDayTitle {
   display: flex;
   justify-content: center;
-}
-
-.marginHourly {
-  margin-left: 10px;
 }
 
 .dayItemTable {
@@ -77,4 +75,56 @@ h1 {
 
 .currentTemp {
   padding-left: 15px;
+}
+
+@media screen and (max-width: 840px) {
+  .dayItemTable {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  #submitButton {
+    background: none;
+  }
+
+  .hourlyTest {
+    display: ;
+  }
+
+  .hourlyForecast {
+    display: inline-block;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 535px) {
+  .hourlyTest {
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  #mainInput {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .inputs {
+    position: relative;
+  }
+
+  #mainInput {
+    width: 100%;
+  }
+
+  #submitButton {
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 15px;
+  }
+
+  h1 {
+    text-align: center;
+  }
 }
