@@ -1,68 +1,73 @@
 body {
-  font-family: Abel;
   background-image: url('https://guidetoiceland.is/image/10636/x/0/the-unpredictable-winter-weather-in-iceland-3.png');
+  background-color: rgba(72,92,111, 0.5);
+  background-blend-mode: darken;
   color: #FFFFFF;
+  font-family: Abel;
 }
 
-h1 {
-  position: relative;
-  margin-left: 25px;
-}
+/* Input Styling */
 
 .inputs {
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: #FFFFFF;
+  background: rgba(255,255,255,0.8);
   border: none;
-  background: none;
+  margin-right: 5px;
+  position: absolute;
+  top: 18px;
+  right: 0;
   height: 40px;
   font-family: Abel;
-  margin-right: 25px;
 }
 
 #mainInput {
-  width: 500px;
-  border-bottom: 1px solid #FFFFFF;
+  width: 30%;
 }
+
+#submitButton {
+  background: none;
+}
+
+/* DisplayTemp Styling */
 
 .currentInfo {
+  text-align: center;
+}
+
+.currentTitle {
   display: flex;
   justify-content: center;
 }
 
-.current {
-  display: flex;
-  justify-content: center;
+.currentTemp {
+  padding-left: 15px;
 }
+
+
+/* Hourly Forecast Styling */
 
 .hourlyForecast {
   width: 100%;
+  text-align: center;
 }
 
-.hourlyTest {
+.hourlyWrapper {
   display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 .hourlyTitle {
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
+
+/* Ten Day Styling */
 
 .tenDay {
   display: flex;
   justify-content: center;
-  margin-left: 25px;
 }
 
 .tenDayTitle {
-  display: flex;
-  justify-content: center;
-}
-
-.marginHourly {
-  margin-left: 10px;
+  text-align: center;
 }
 
 .dayItemTable {
@@ -75,6 +80,58 @@ h1 {
   width: 100px;
 }
 
-.currentTemp {
-  padding-left: 15px;
+hr {
+  width: 90%;
+}
+
+@media screen and (max-width: 840px) {
+  .dayItemTable {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  #submitButton {
+    background: none;
+  }
+
+  .hourlyWrapper {
+    display: ;
+  }
+
+  .hourlyForecast {
+    display: inline-block;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 535px) {
+  .hourlyWrapper {
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  #mainInput {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .inputs {
+    position: relative;
+  }
+
+  #mainInput {
+    width: 100%;
+  }
+
+  #submitButton {
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 15px;
+  }
+
+  h1 {
+    text-align: center;
+  }
 }
