@@ -1,5 +1,7 @@
 body {
   background-image: url('https://guidetoiceland.is/image/10636/x/0/the-unpredictable-winter-weather-in-iceland-3.png');
+  background-color: rgba(72,92,111, 0.5);
+  background-blend-mode: darken;
   color: #FFFFFF;
   font-family: Abel;
 }
