@@ -7,17 +7,17 @@ import $ from 'jquery'
 describe('display temp', () => {
 
   it('renders openingStuff', () => {
-    const wrapper = shallow(<DisplayTemp stuff={() => {}}/>);
+    const wrapper = shallow(<DisplayTemp hourly={() => {}}/>);
     expect(wrapper.is('.openingStuff')).toEqual(true)
   });
 
   it('renders display', () => {
-    const wrapper = shallow(<DisplayTemp stuff={data}/>);
+    const wrapper = shallow(<DisplayTemp hourly={data}/>);
     expect(wrapper.is('.display')).toEqual(true)
   });
 
   it('renders the correct temp', () => {
-    const wrapper = shallow(<DisplayTemp stuff={data}/>);
+    const wrapper = shallow(<DisplayTemp hourly={data}/>);
     expect(wrapper.is('.display')).toEqual(true)
     const element = wrapper.find('.currentTemp');
     expect(element.text()).toEqual('Current Temperature: 59 ℉');

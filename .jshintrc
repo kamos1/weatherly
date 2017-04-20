@@ -1,4 +1,4 @@
-/*{
+{
   "predef": [
     "document",
     "window",
@@ -33,4 +33,4 @@
   "esnext": true,
   "unused": true,
   "mocha": true
-}*/
+}

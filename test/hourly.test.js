@@ -7,17 +7,17 @@ import $ from 'jquery';
 describe('hourly', () => {
 
   it('should render nothing', () => {
-    const wrapper = shallow(<Hourly stuff={() => {}}/>);
+    const wrapper = shallow(<Hourly hourly={() => {}}/>);
     expect(wrapper.is('.empty')).toEqual(true)
   });
 
   it('renders Hourly component', () => {
-    const wrapper = shallow(<Hourly stuff={data}/>);
+    const wrapper = shallow(<Hourly hourly={data}/>);
     expect(wrapper.is('.hourlyMain')).toEqual(true)
   });
 
   it('renders 7 cards', () => {
-    const wrapper = shallow(<Hourly stuff={data} />)
+    const wrapper = shallow(<Hourly hourly={data} />)
     var card1 = wrapper.find('.hourlyForecast div').first();
     var card2 = wrapper.find('.hourlyForecast div').last();
 
