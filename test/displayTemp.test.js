@@ -1,21 +1,28 @@
 import React from 'react'
 import { shallow } from 'enzyme';
 import DisplayTemp from '../lib/components/DisplayTemp';
-import data from '../lib/components/San_Francisco';
-import data2 from '../lib/components/San_Fran';
+import data from '../lib/components/HourlyConditions';
 import $ from 'jquery'
-require('locus')
 
 describe('display temp', () => {
-  const mock = jest.fn();
-  const wrapper = shallow(<DisplayTemp stuff={(data2)}/>);
-  // console.log(wrapper.debug())
+
   it('renders openingStuff', () => {
-    // console.log(wrapper.find('.openingStuff').length)
+    const wrapper = shallow(<DisplayTemp stuff={() => {}}/>);
     expect(wrapper.is('.openingStuff')).toEqual(true)
   });
-  it('renders openingStuff', () => {
-    expect(wrapper.is('.rendered')).toEqual(true)
+
+  it('renders display', () => {
+    const wrapper = shallow(<DisplayTemp stuff={data}/>);
+    expect(wrapper.is('.display')).toEqual(true)
   });
+
+  it('renders the correct temp', () => {
+    const wrapper = shallow(<DisplayTemp stuff={data}/>);
+    expect(wrapper.is('.display')).toEqual(true)
+    const element = wrapper.find('.currentTemp');
+    expect(element.text()).toEqual('Current Temperature: 59 ℉');
+  })
+
+
 
 })

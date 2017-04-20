@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import Input from '../lib/components/Input'
 import $ from 'jquery'
 
@@ -17,18 +17,8 @@ it('should update state.location when submit is clicked', () => {
 });
 
 it('should call componentDidMount', () => {
-    let spy = jest.spyOn(Input.prototype, 'componentDidMount')
-    let wrapper = mount(<Input getWeather={() => {}} />)
+    let spy = jest.spyOn(Input.prototype, 'componentDidMount');
+    let wrapper = mount(<Input getWeather={() => {}} />);
 
     expect(spy).toHaveBeenCalled();
 });
-
-it('should call submit', () => {
-  let spy = jest.spyOn(Input.prototype, 'submit')
-  let wrapper = mount(<Input getWeather={() => {}} />)
-  let button = wrapper.find('#submitButton')
-
-  button.simulate('click');
-
-  expect(spy).toHaveBeenCalled();
-})
