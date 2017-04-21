@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 import { shallow } from 'enzyme';
 import Weatherly from '../lib/components/Weatherly';
 import Input from '../lib/components/Input';
 import DisplayTemp from '../lib/components/DisplayTemp';
 import Hourly from '../lib/components/Hourly';
 import TenDay from '../lib/components/TenDay';
-import $ from 'jquery'
+import $ from 'jquery';
 
 describe('weatherly', () => {
   it('renders the components', () => {

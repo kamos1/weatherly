@@ -6,7 +6,7 @@ import $ from 'jquery';
 
 describe('dayItem', () => {
   it('renders the components', () => {
-    const wrapper = shallow(<DayItem getWeather={() => { 1,1,1,1 }}/>);
+    const wrapper = shallow(<DayItem getWeather={() => { 1, 1, 1, 1 }}/>);
 
     expect(wrapper.is('.tenDay')).toEqual(true);
   });
