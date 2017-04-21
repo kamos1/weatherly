@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import { shallow, mount } from 'enzyme';
-import Input from '../lib/components/Input'
-import $ from 'jquery'
+import Input from '../lib/components/Input';
+import $ from 'jquery';
 
 
 it('should update state.location when submit is clicked', () => {
@@ -12,6 +12,7 @@ it('should update state.location when submit is clicked', () => {
 
   input.simulate('change', { target: { value: 'oreos' } });
   expect(wrapper.state('location')).toEqual('oreos');
+
   btn.simulate('click');
   expect(wrapper.state('location')).toEqual('');
 });
